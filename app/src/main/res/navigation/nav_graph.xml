@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/signin"
+    android:id="@+id/nav_graph">
+
+    <fragment
+        android:id="@+id/signin"
+        android:name="com.example.onlineshopsatriaadhipradana.SigninFragment"
+        android:label="fragment_login">
+        <action
+            android:id="@+id/action_signin_to_welocomeBackFragment"
+            app:destination="@id/welocomeBackFragment" />
+        <action
+            android:id="@+id/action_signin_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/welocomeBackFragment"
+        android:name="com.example.onlineshopsatriaadhipradana.WelocomeBackFragment"
+        android:label="WelocomeBackFragment" >
+        <action
+            android:id="@+id/action_welocomeBackFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.onlineshopsatriaadhipradana.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.onlineshopsatriaadhipradana.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+
+
+</navigation>
