@@ -1,7 +1,7 @@
-package com.example.onlineshopsatriaadhipradana
+package sm.tosk.android.common.viewmodel
 
 import androidx.lifecycle.*
-import com.example.onlineshopsatriaadhipradana.CommonViewModelFactory
+import com.example.onlineshopsatriaadhipradana.di.CommonViewModelFactory
 import dagger.*
 import javax.inject.Provider
 

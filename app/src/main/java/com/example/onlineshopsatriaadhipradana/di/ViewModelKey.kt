@@ -1,4 +1,4 @@
-package com.example.onlineshopsatriaadhipradana
+package sm.tosk.android.common.viewmodel
 
 import androidx.lifecycle.ViewModel
 import dagger.MapKey

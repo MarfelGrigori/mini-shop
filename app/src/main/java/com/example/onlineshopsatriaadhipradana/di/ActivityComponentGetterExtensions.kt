@@ -1,7 +1,8 @@
-package com.example.onlineshopsatriaadhipradana
+package sm.tosk.android.common.activity
 
 import android.app.Activity
 import androidx.fragment.app.Fragment
+import com.example.onlineshopsatriaadhipradana.di.ActivityComponent
 
 fun Activity.getActivityComponent(): ActivityComponent {
     if (this !is ActivityComponentHolder)

@@ -1,11 +1,15 @@
-package com.example.onlineshopsatriaadhipradana
+package com.example.onlineshopsatriaadhipradana.di
 
 import androidx.lifecycle.ViewModelProvider
 import dagger.Subcomponent
+import sm.tosk.android.common.activity.ActivityScope
+import sm.tosk.android.common.viewmodel.ViewModelModule
+
 
 @ActivityScope
 @Subcomponent(modules = [
     ActivityModule::class,
+    ViewModelModule::class,
 ])
 interface ActivityComponent {
     fun getViewModelFactory(): ViewModelProvider.Factory

@@ -1,7 +1,8 @@
-package com.example.onlineshopsatriaadhipradana
+package sm.tosk.android.common.viewmodel
 
 import android.app.Activity
 import androidx.fragment.app.Fragment
+import sm.tosk.android.common.activity.getActivityComponent
 
 fun Activity.getViewModelFactory() = getActivityComponent().getViewModelFactory()
 

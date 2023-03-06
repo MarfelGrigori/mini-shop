@@ -1,4 +1,4 @@
-package com.example.onlineshopsatriaadhipradana
+package sm.tosk.android.common.activity
 
 import javax.inject.Scope
 
