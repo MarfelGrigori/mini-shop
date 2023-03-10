@@ -59,13 +59,17 @@ class SigninFragment : Fragment() {
             val email = _binding?.email?.text.toString()
             viewModel.fiendItem(firstName)
             viewModel.users.subscribe(lifecycleScope){
-                if (it.isEmpty()){
-                    viewModel.insert(User(firstName,lastName,email,""))
-                } else {
-                    Toast.makeText(context,":already exists", Toast.LENGTH_SHORT).show()
+                if (isEmailValid(email)&&firstName.isNotEmpty()){
+                    if (it.isEmpty()){
+                        viewModel.insert(User(firstName,lastName,email,""))
+                        view.findNavController().navigate(R.id.homeFragment)
+                    } else {
+                        Toast.makeText(context,"already exists", Toast.LENGTH_SHORT).show()
+                    }
+                } else{
+                    Toast.makeText(context,"incorrect", Toast.LENGTH_SHORT).show()
                 }
             }
-//            view.findNavController().navigate(R.id.homeFragment)
         }
     }
 
