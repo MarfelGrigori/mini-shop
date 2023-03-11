@@ -1,16 +1,14 @@
 package com.example.onlineshopsatriaadhipradana.localdatabase
 
-import android.app.Application
-import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.ViewModel
 import kotlinx.coroutines.channels.BufferOverflow
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
+import javax.inject.Inject
 
-class MyViewModel(application: Application) : AndroidViewModel(application) {
-
-    private val myRepository = UsersRepository(MyDatabase.getINSTANCE(application))
+class MyViewModel @Inject constructor(private val myRepository: UsersRepository) : ViewModel() {
 
     private val _users = MutableStateFlow<List<User>>(emptyList())
     val users: StateFlow<List<User>> = _users
